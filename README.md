@@ -10,6 +10,10 @@ KELAS: I241D
 
 <img width="2000" height="1600" alt="StoryBoard Final" src="https://github.com/user-attachments/assets/eb7135b0-4e16-44c7-af09-fa5b29a6b5aa" />
 
+# MOCKUP
+
+<img width="1620" height="821" alt="Mockup android studio" src="https://github.com/user-attachments/assets/b3f61eab-5f71-4b13-a077-6cc07541614d" />
+
 # CLICK UP
 
 <img width="1460" height="656" alt="image" src="https://github.com/user-attachments/assets/6f71c9e6-a478-4944-bdc8-6774c7beafbc" />
