@@ -1,0 +1,21 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <!-- Menggunakan MaterialComponents agar Chip dan FAB berjalan stabil -->
+    <style name="Base.Theme.NoteMate" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <!-- Warna Utama (Kuning NoteMate) -->
+        <item name="colorPrimary">#FFD700</item>
+        <item name="colorPrimaryVariant">#FFC107</item>
+        <item name="colorOnPrimary">@android:color/black</item>
+
+        <!-- Warna Sekunder -->
+        <item name="colorSecondary">#03DAC6</item>
+        <item name="colorSecondaryVariant">#018786</item>
+        <item name="colorOnSecondary">@android:color/black</item>
+
+        <!-- Status Bar -->
+        <item name="android:statusBarColor">#FFD700</item>
+        <item name="android:windowLightStatusBar">true</item>
+    </style>
+
+    <style name="Theme.NoteMate" parent="Base.Theme.NoteMate" />
+</resources>

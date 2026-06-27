@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    tools:context=".NoteActivity">
+
+    <!-- Header / Toolbar -->
+    <LinearLayout
+        android:id="@+id/note_header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingStart="16dp"
+        android:paddingTop="16dp"
+        android:paddingEnd="16dp"
+        android:paddingBottom="8dp"
+        android:gravity="center_vertical">
+
+        <ImageButton
+            android:id="@+id/btn_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/back"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:contentDescription="Kembali"/>
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Catatan"
+            android:layout_marginStart="8dp"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:textColor="@android:color/black"/>
+
+        <!-- TOMBOL VOICE INPUT -->
+        <ImageButton
+            android:id="@+id/btn_voice_input"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:src="@android:drawable/ic_btn_speak_now"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:contentDescription="Input Suara"
+            android:tint="@android:color/black"
+            android:layout_marginEnd="4dp"/>
+
+        <!-- AREA TOMBOL AI -->
+        <FrameLayout
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_marginEnd="4dp">
+
+            <ImageButton
+                android:id="@+id/btn_ai_summarize"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@android:drawable/ic_menu_info_details"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:contentDescription="Ringkas dengan AI"
+                android:tint="@android:color/black" />
+
+            <ProgressBar
+                android:id="@+id/progress_bar_ai"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_gravity="center"
+                android:visibility="gone" />
+        </FrameLayout>
+
+        <!-- TOMBOL HAPUS -->
+        <ImageButton
+            android:id="@+id/btn_delete_note"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:src="@android:drawable/ic_menu_delete"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:contentDescription="Hapus Catatan"
+            android:visibility="gone"
+            android:tint="@android:color/holo_red_dark" />
+
+    </LinearLayout>
+
+    <!-- Konten Input -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/note_header"
+        android:layout_above="@id/btn_save_note"
+        android:padding="16dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@drawable/rounded_yellow_container"
+            android:padding="16dp">
+
+            <!-- PENAMBAHAN SPINNER KATEGORI -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Pilih Kategori:"
+                android:textSize="12sp"
+                android:textColor="#555555"
+                android:layout_marginBottom="4dp"/>
+
+            <Spinner
+                android:id="@+id/spinner_category"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                android:background="@android:drawable/btn_dropdown"
+                android:spinnerMode="dropdown" />
+
+            <EditText
+                android:id="@+id/edit_text_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Tambahkan judul"
+                android:textStyle="bold"
+                android:textSize="20sp"
+                android:background="@android:color/transparent"
+                android:inputType="textCapSentences"
+                android:paddingBottom="8dp"/>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#DDDDDD"
+                android:layout_marginBottom="8dp"/>
+
+            <EditText
+                android:id="@+id/edit_text_content"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Catat sesuatu"
+                android:gravity="top"
+                android:background="@android:color/transparent"
+                android:inputType="textMultiLine"
+                android:minLines="10"
+                android:paddingTop="8dp"/>
+        </LinearLayout>
+    </ScrollView>
+
+    <!-- Tombol Simpan/Perbarui -->
+    <Button
+        android:id="@+id/btn_save_note"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="32dp"
+        android:layout_marginEnd="32dp"
+        android:layout_marginBottom="32dp"
+        android:text="Simpan"
+        android:textAllCaps="false"
+        android:textSize="16sp"
+        android:textColor="@android:color/black"
+        android:backgroundTint="#FFD700"
+        style="@style/Widget.AppCompat.Button.Colored" />
+
+</RelativeLayout>

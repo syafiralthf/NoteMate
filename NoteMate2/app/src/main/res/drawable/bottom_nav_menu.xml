@@ -1,0 +1,11 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/nav_notes"
+        android:icon="@android:drawable/ic_menu_edit"
+        android:title="Catatan" />
+    <item
+        android:id="@+id/nav_tasks"
+        android:icon="@android:drawable/checkbox_on_background"
+        android:title="Tugas" />
+</menu>
+   
